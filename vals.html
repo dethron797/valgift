@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Me!!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Brush Script MT", cursive;
+            background-color: #ffe6f0;
+            margin-top: 300px;
+        }
+
+        h1 {
+            font-size: 55px;
+            color: #d63384;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 20px;
+            margin: 40px 40px 40px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #999;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mabi! Will You Be My Valentine?❤️</h1>
+
+    <button id="yesBtn" onclick="sayYes()">Yes! 💕</button>
+    <button id="noBtn" onmouseover="moveButton()">Noooo 😢</button>
+
+    <script>
+        function sayYes() {
+            // Replace page content
+            document.body.innerHTML = "<h1>YAYYY ❤️ I lovee youuu 🥰</h1>";
+
+           }
+        function moveButton() {
+            var button = document.getElementById("noBtn");
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
